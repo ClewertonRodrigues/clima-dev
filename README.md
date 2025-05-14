@@ -1,5 +1,6 @@
 # Clima Dev
 
+<img src="./images/climadev.png"/>
 
 ## Descrição
 
