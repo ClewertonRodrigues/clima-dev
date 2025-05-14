@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Clima dev</title>
+  </head>
+
+  <body class="w-full h-screen flex items-center justify-center p-2">
+    <main
+      class="max-w-md w-full flex flex-col bg-white p-4 rounded-2xl shadow-2xl"
+    >
+      <form id="form" class="flex items-center bg-gray-300 rounded-md p-2">
+        <i class="fa-solid fa-location-dot text-[#16314C]"></i>
+        <input
+          id="input-cidade"
+          class="w-full outline-0 border-0 mx-2"
+          type="search"
+          placeholder="Digite o nome da cidade..."
+        />
+        <button id="botao-busca">
+          <i class="fa-solid fa-magnifying-glass text-[#16314C]"></i>
+        </button>
+      </form>
+
+      <p
+        id="erro"
+        class="text-center text-xl mt-5 text-red-600 font-medium hidden"
+      >
+        Cidade não encontrada!
+      </p>
+
+      <div id="content" class="mt-6 hidden">
+        <h1
+          id="nome-cidade"
+          class="sm:text-5xl w-full text-center mb-4 font-bold text-[#16314C] text-4xl"
+        ></h1>
+
+        <section
+          class="flex justify-between overflow-hidden rounded-xl border border-[#16314C]"
+        >
+          <div class="w-4/6 flex items-center justify-center bg-[#16314C]">
+            <img id="img-tempo" src="" class="drop-shadow-2xl w-32" alt="" />
+          </div>
+
+          <div class="text-[#16314C] w-full flex justify-center py-10">
+            <div>
+              <h1 id="temperatura" class="font-bold text-5xl mb-2"></h1>
+              <span id="info-tempo" class="font-bold text-xl"></span>
+            </div>
+          </div>
+        </section>
+
+        <div class="mt-8 w-full grid grid-cols-2 gap-3">
+          <section
+            class="flex items-center justify-between overflow-hidden rounded-xl shadow-xl/20 border border-[#16314C]"
+          >
+            <div
+              class="h-full w-3/6 flex items-center justify-center bg-[#16314C]"
+            >
+              <i class="fa-solid fa-temperature-high text-red-800"></i>
+            </div>
+
+            <div class="text-[#16314C] text-center w-full py-2">
+              <p class="font-bold text-sm">Temp. max</p>
+              <span id="temp-max" class="font-bold text-sm"></span>
+            </div>
+          </section>
+
+          <section
+            class="flex items-center justify-between overflow-hidden rounded-xl shadow-xl/20 border border-[#16314C]"
+          >
+            <div
+              class="h-full w-3/6 flex items-center justify-center bg-[#16314C]"
+            >
+              <i class="fa-solid fa-temperature-low text-blue-300"></i>
+            </div>
+
+            <div class="text-[#16314C] text-center w-full py-2">
+              <p class="font-bold text-sm">Temp. min</p>
+              <span id="temp-min" class="font-bold text-sm"></span>
+            </div>
+          </section>
+
+          <section
+            class="flex items-center justify-between overflow-hidden rounded-xl shadow-xl/20 border border-[#16314C]"
+          >
+            <div
+              class="h-full w-3/6 flex items-center justify-center bg-[#16314C]"
+            >
+              <i class="fa-solid fa-droplet text-blue-700"></i>
+            </div>
+
+            <div class="text-[#16314C] text-center w-full py-2">
+              <p class="font-bold text-sm">Umidade</p>
+              <span id="umidade" class="font-bold text-sm"></span>
+            </div>
+          </section>
+
+          <section
+            class="flex items-center justify-between overflow-hidden rounded-xl shadow-xl/20 border border-[#16314C]"
+          >
+            <div
+              class="h-full w-3/6 flex items-center justify-center bg-[#16314C]"
+            >
+              <i class="fa-solid fa-wind text-violet-400"></i>
+            </div>
+
+            <div class="text-[#16314C] text-center w-full py-2">
+              <p class="font-bold text-sm">Vento</p>
+              <span id="vento" class="font-bold text-sm"></span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
